@@ -3,6 +3,12 @@ html
 font-family: 'Raleway', sans-serif;
 }
 
+img
+{
+    width: 100%;
+    object-fit: cover;
+}
+
 body
 {
     display: flex;
@@ -307,6 +313,10 @@ aside
     justify-content: space-between;
 }
 
+.container-card-aside
+{
+    display: flex;
+}
 
 .soleil
 {
@@ -326,9 +336,9 @@ aside
     background-color: chartreuse;
 }
 
-.pictureAside>img
+.container-card-aside img
 {
-    width: 100px;
+    width: 50%;
     height: 100px;
 border-radius: 8% 0 0 8%;
 
