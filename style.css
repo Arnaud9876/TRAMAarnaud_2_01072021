@@ -180,6 +180,15 @@ outline-width: 0em;
     cursor: pointer;
 }
 
+#bouton02
+{
+    display: none;
+}
+
+.fa-search{
+    display: none;
+}
+
 /*filtres*/
 
 #filtres
@@ -522,10 +531,11 @@ h4
 
 /* Vue tablette*/ 
 
-@media (max-width: 1023px){
+@media (min-width:768px) and (max-width: 1023px)
+{
 
 
-/*filtres */
+/*filtres tablette*/
 
 #filtresh3
 {
@@ -549,7 +559,7 @@ h4
 
 
 
-/* main*/
+/* main tablette*/
 
     #main
     {
@@ -558,7 +568,7 @@ h4
         margin-right:3%;
     }
 
-/*aside*/
+/*aside tablette*/
 
 #aside
 {
@@ -601,7 +611,7 @@ h4
     margin-bottom: 20px;
 }
 
-/*activités*/
+/*activités tablette*/
 
 .activites
 {
@@ -632,7 +642,7 @@ h4
 }
 
 
-/* footer*/
+/* footer tablette*/
 
 footer
 {
@@ -650,14 +660,212 @@ footer
 
 /* vue mobile*/
 
-@media (max-width: 767px)
+@media (min-width:100px) and (max-width:767px)
 {
 
+img
+{
+    max-width: 100%;
+    height: 0 auto;
+}
+
+/* header mobile*/
+
+.nav>ul
+{
+    flex-wrap: wrap; 
+}
+
+#bold
+{
+    order: -1;
+   
+}
+
+#hebergement
+{
+margin: 0;
+width: 50%;
+}
+
+#activitesOff
+{
+    margin: 0;
+    width: 50%;
+}
+
+/* titre h1 mobile*/
+
+.title-h1
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* barre de recherche mobile */
 
 
 
+
+#recherche
+{
+    width: auto;
+}
+
+#bouton
+{
+   display: none;
+}
+
+
+
+/* filtre mobile */
+
+
+#filtres
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#filtresh3
+{
+    display: flex;
+    width: 100%;
+}
+
+#filtres ul 
+{
+    padding-left: 0;
+}
+
+#filtres ul li
+{
+    margin: 20px 5px 20px 0px;
+}
+
+/* infos mobile*/
+
+#info
+{
+    align-items: center;
+}
+
+
+
+.title-h2aside
+{
+    width: 100%;
+    margin: 20px 20px 20px 0px;
+   
+}
+
+.fa-chart-line
+{
+   margin-top: 20px; 
+   margin-left: 40px;
+   
+}
+
+/* aside mobile*/
+
+#aside
+{
+    order: -1;
+    width: 100%;
+    align-items: center;
+    border-radius: 0;
+    margin-right: 0;
+}
+
+.container-card-aside
+{
+    padding: 5px;
+}
+
+.soleil
+{ 
+  margin-top: 20px;
+}
+
+.eau
+{
+    margin-top: 15px;
+margin-bottom: 15px;
+
+}
+
+.blanc
+{
+    margin-bottom: 20px;
+}
+
+
+
+/*main mobile*/
+
+#main
+{
+   flex-flow: column wrap;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    background-color: white;
+}
+
+.main
+{
+    width: 90%;
+    border: 3px solid #F2F2F2;
+   
+    
+}
+
+.hotel-name
+{
+    margin: 5px 0 5px 0;
+}
+
+.hotel-price
+{
+    margin: 5px 0 5px 0;
+}
+
+/* activites mobile*/
+
+
+
+
+
+
+
+/* footer mobile */
+
+footer
+{
+    display: flex;
+    flex-direction: column;
+   justify-content: flex-start;
+}
+
+.footer
+{
+    width: 100%;
+}
+
+.footer li
+{
+margin-top: 15px;
+}
 
 
 
 
 }
+
+
+
+
+
+
