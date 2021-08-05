@@ -15,12 +15,6 @@ body
     margin:0
 }
 
-#container-main
-{
-    display: flex;
-    flex-wrap: wrap;
-}
-
 /* les liens*/
 a
 {
@@ -132,6 +126,7 @@ color: #0065FC;
     justify-content: flex-start;
     width: 350px;
     height: 50px;
+   
 }
 
 .fa-map-marker-alt
@@ -167,25 +162,29 @@ padding: 16px;
     color: black;
 }
 
-#bonton
+#button
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color:#0065FC;
     color: white;
     border: none;
     border-radius: 0px 14px 14px 0px;
-    width: 120px;
-    height: 50px;
-outline-width: 0em;
-    border: 0em;
+   padding: 0px 20px 20px 10px;
+   margin-left: 0;
     cursor: pointer;
+   
 }
 
-#bouton02
+#btn-rechercher
 {
-    display: none;
+  font-size: 14px;
+  margin-top: 15px;
 }
 
-.fa-search{
+#btn-loupe
+{
     display: none;
 }
 
@@ -239,7 +238,7 @@ display:inline;
     color:#0065FC;  
     border: 2px solid #F2F2F2;
     border-radius: 100%;
-    padding: 7px;
+    padding: 5px 10px 5px 10px;
     margin-right: 10px;
 }
 
@@ -260,25 +259,38 @@ margin-bottom:25px;
     
 /*main*/
 
+#container-main
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+}
+
 #hebergements
 {
    width: 100%;
    height: 20px;
-   margin-left: 5%;
-   margin-top: 3%;
+   margin-left: 40px;
+   margin-top: 20px;
 }
 
 main
 {
 background-color: #F2F2F2;
-margin-right: 5%;
-margin-left: 3%;
+margin-right: 30px;
+margin-left: 50px;
 border-radius: 20px;
 display:flex;
 flex-wrap: wrap;
 flex-direction: row;
 justify-content: space-around;
-width: 63%;  
+padding: 0px 25px;
+}
+
+#main
+{
+    width: 75%;
 }
 
 .main > a
@@ -290,13 +302,23 @@ width: 100%;
 .main
 {
   background-color: white;
-  width: 27%;
+  width: 30%;
   height: 250px;
   display: flex;
   flex-direction: row;
-  margin:10px;
   border-radius: 20px;
-  padding: 7px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.hotel-name
+{
+    margin: 10px 0 0 0;
+}
+
+.hotel-price
+{
+    margin: 10px 0 10px 0; 
 }
 
 .pictureMain>img
@@ -325,8 +347,7 @@ aside
     flex-direction: column;
     justify-content: space-around;
     padding: 10px 20px;
-    width: 23%;
-    margin-right: 3%;
+    margin-right:50px;
     border-radius: 20px;
 }
 
@@ -348,9 +369,22 @@ margin-top: 0;
     justify-content: space-between;
 }
 
+#aside
+{
+    padding: 0px 25px 0px 25px;
+}
+
 .container-card-aside
 {
     display: flex;
+    padding: 5px 0px 5px 5px;
+}
+
+.container-hotel
+{
+    margin-left: 15px;
+    padding-right: 20px;
+    width: 50%;
 }
 
 .soleil
@@ -373,7 +407,7 @@ margin-top: 0;
 
 .container-card-aside picture
 {
-    width: 40%;
+    width: 45%;
 }
 
 .container-card-aside img
@@ -384,20 +418,15 @@ border-radius: 20px 0 0 20px;
 
 }
 
-.container-hotel
-{
-    width: 55%;
-    margin-left: 5%;
-}
-
 /*activites*/
 
 #activites
 {
-    margin-left: 3%;
-    margin-top: 4%;
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   height: 30px;
 }
-
 
 .activites 
 {
@@ -405,9 +434,10 @@ border-radius: 20px 0 0 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 450px;
-    margin-left: 3%;
-    margin-right: 3%;
+    flex-wrap: wrap;
+    height: 500px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .activiteImg1>img
@@ -428,8 +458,8 @@ border-radius: 20px 20px 0 0;
 
 .name-activity
 {
-     margin-top: 0%;
-    padding: 3% 0 0 3%;
+     margin-top: 5px;
+    margin-left: 10px;
     height: 40px;
     width: 95%;
     border-radius: 0 0 20px 20px;
@@ -528,18 +558,44 @@ h4
 /* --Medias queries--*/
 
 
+/* taille desktop intermediaire*/
+
+@media all and (min-width:1024px) and (max-width:1130px)
+ {
+#main
+{
+    margin-left: 30px; 
+}
+
+#aside
+{
+    width: 450px;
+    margin-right: 30px;
+}
+
+}
 
 /* Vue tablette*/ 
 
-@media (min-width:768px) and (max-width: 1023px)
+@media all and (min-width:768px) and (max-width: 1023px)
 {
+body
+{
+    margin-right: 0;
+}
+
+.sectionRecherche
+{
+    margin-right: 0;
+    width: auto;
+}
 
 
 /*filtres tablette*/
 
 #filtresh3
 {
-    width: 100%;
+    width: auto;
 }
 
 #filtres
@@ -561,12 +617,25 @@ h4
 
 /* main tablette*/
 
+#container-main
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
     #main
     {
-        width: 100%;
+    width: 100%;
         margin-bottom: 20px;
-        margin-right:3%;
+        margin: 0 25px 25px 25px;
     }
+
+#hebergements
+{
+    text-align: center;
+}
+
+
 
 /*aside tablette*/
 
@@ -574,8 +643,9 @@ h4
 {
   justify-content: space-around;
     width: 94%;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-top: 15px;
 }
 #fa-chart-line
 {
@@ -651,16 +721,11 @@ footer
     justify-content: space-between;
 }
 
-
-
-
 }
 
+/* vue mobile iphone8*/
 
-
-/* vue mobile*/
-
-@media (min-width:100px) and (max-width:767px)
+@media all and (min-width:100px) and (max-width:767px)
 {
 
 img
@@ -671,14 +736,36 @@ img
 
 /* header mobile*/
 
+header
+{
+    margin: 0;
+    display: block;
+}
+
+#logo
+{
+    margin-left: 10px;
+}
+
+.nav
+{  
+    display: block;
+}
+
 .nav>ul
 {
-    flex-wrap: wrap; 
+    display: flex; 
+    padding: 0;
+    text-align: center;
 }
+
 
 #bold
 {
     order: -1;
+    position: absolute;
+    top: 15px;
+    right: 15px;
    
 }
 
@@ -686,13 +773,39 @@ img
 {
 margin: 0;
 width: 50%;
+border-bottom: 3px solid #F2F2F2;
+padding-bottom: 10px;
 }
+
+#hebergement:hover
+{
+    border-bottom: 3px solid #0065FC;  
+}
+
+#hebergement a:hover
+{
+    border-top: none;
+}
+
 
 #activitesOff
 {
     margin: 0;
     width: 50%;
+    border-bottom: 3px solid #F2F2F2;
+    padding-bottom: 10px;
+} 
+
+#activitesOff:hover
+{
+    border-bottom: 3px solid #0065FC;
 }
+
+#activitesOff a:hover
+{ 
+    border-top: none;
+}
+
 
 /* titre h1 mobile*/
 
@@ -705,23 +818,28 @@ width: 50%;
 
 /* barre de recherche mobile */
 
-
-
-
-#recherche
+#btn-rechercher
 {
-    width: auto;
+    display: none;
 }
 
-#bouton
+#button
 {
-   display: none;
+   width: 50px;
+   height: 50px;
+   border-radius: 14px;
 }
 
-
+#btn-loupe
+{
+    font-size: 20px;
+    display: flex;
+    padding-top: 20px;
+    padding-left: 10px;
+   
+}
 
 /* filtre mobile */
-
 
 #filtres
 {
@@ -738,18 +856,31 @@ width: 50%;
 #filtres ul 
 {
     padding-left: 0;
+ 
 }
 
 #filtres ul li
 {
-    margin: 20px 5px 20px 0px;
+    margin: 10px 10px 10px 0px;
 }
+
+.hover
+{
+    margin-bottom: 10px;
+}
+
 
 /* infos mobile*/
 
+
+.fa-info
+{
+    float: left;   
+}
+
 #info
 {
-    align-items: center;
+   display: block;
 }
 
 
@@ -768,20 +899,26 @@ width: 50%;
    
 }
 
+
+/* main mobile*/
+
+
+
 /* aside mobile*/
 
 #aside
 {
     order: -1;
-    width: 100%;
     align-items: center;
+    width: 100%;
     border-radius: 0;
     margin-right: 0;
+    padding: 0 20px;
 }
 
-.container-card-aside
+.container-card-aside>picture
 {
-    padding: 5px;
+width: 40%;
 }
 
 .soleil
@@ -801,14 +938,51 @@ margin-bottom: 15px;
     margin-bottom: 20px;
 }
 
+.container-hotel
+{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    width: 55%;
+}
+
+.hotel-price
+{
+    width: 100%;
+    margin: 0;
+}
+
+.star
+{
+background-color: blueviolet;
+
+}
 
 
 /*main mobile*/
 
+#container-main
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#hebergements
+{
+    display: block;
+    font-size: 22px;
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+}
+
 #main
 {
-   flex-flow: column wrap;
-    width: 100%;
+    padding: 0 20px;
+    flex-flow: row wrap;
+justify-content: center;
+width: auto;
     margin: 0;
     border: 0;
     background-color: white;
@@ -816,10 +990,22 @@ margin-bottom: 15px;
 
 .main
 {
-    width: 90%;
-    border: 3px solid #F2F2F2;
+    height: 250px;
+ width: 95%;
+    border:  2px solid #F2F2F2;
+   box-shadow:3px 3px 2px #F2F2F2;
    
-    
+}
+
+.pictureMain>img
+{
+    height: 150px;
+}
+
+.container-hotel-main
+{
+    margin-left: 15px;
+    margin-top: 10px;
 }
 
 .hotel-name
@@ -832,9 +1018,38 @@ margin-bottom: 15px;
     margin: 5px 0 5px 0;
 }
 
+.plus
+{
+    margin: 0;
+}
+
 /* activites mobile*/
 
+.activites
+{
+margin: 0 20px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
 
+.activiteImg1>img
+{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 100px;
+   border-radius: 20px 20px 0 0;
+}
+
+.activiteImg>img
+{
+display: flex;
+flex-direction: row;
+width: 100%;
+height: 140px;
+border-radius: 20px 20px 0 0;
+}
 
 
 
