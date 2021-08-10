@@ -899,11 +899,6 @@ padding-bottom: 10px;
    
 }
 
-
-/* main mobile*/
-
-
-
 /* aside mobile*/
 
 #aside
@@ -942,8 +937,8 @@ margin-bottom: 15px;
 {
     padding: 0;
     display: flex;
-    flex-direction: row;
-
+    flex-direction: column;
+    justify-content: space-around;
     flex-wrap: wrap;
     width: 55%;
 }
@@ -953,13 +948,6 @@ margin-bottom: 15px;
     width: 100%;
     margin: 0;
 }
-
-.star
-{
-background-color: blueviolet;
-
-}
-
 
 /*main mobile*/
 
@@ -1029,14 +1017,15 @@ width: auto;
 {
 margin: 0 20px;
 display: flex;
-flex-direction: row;
+flex-direction: column;
+align-items: center;
+height: auto;
+margin: 0;
 flex-wrap: wrap;
 }
 
 .activiteImg1>img
 {
-   display: flex;
-   flex-direction: column;
    width: 100%;
    height: 100px;
    border-radius: 20px 20px 0 0;
@@ -1044,15 +1033,39 @@ flex-wrap: wrap;
 
 .activiteImg>img
 {
-display: flex;
-flex-direction: row;
 width: 100%;
-height: 140px;
+height: 100px;
 border-radius: 20px 20px 0 0;
 }
 
+.column1
+{
+    background-color: aquamarine;
+    display: block;
+    height: 150px;
+    width:90%;
+}
 
+.pomegues
+{
+    background-color: brown;
+    display: block;
+    height: 150px;
+    width:90%;
+    padding-bottom: 25px;
+}
 
+.frioul
+{
+    background-color: chocolate;
+}
+
+.column3
+{
+    display: block;
+    height: 150px;
+    width:90%; 
+}
 
 
 /* footer mobile */
